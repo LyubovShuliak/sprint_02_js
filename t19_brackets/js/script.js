@@ -1,7 +1,7 @@
 
-
-function gr(str) {
-    if (str.indexOf(")") == -1 && str.indexOf("(") == -1) {
+module.exports={checkBrackets}
+function checkBrackets(str) {
+    if (typeof str !== 'string'||str.indexOf(")") == -1 && str.indexOf("(") == -1) {
         return - 1
     }
     let str2 = str.match(/[(]|[)]/g).join("")
@@ -16,7 +16,7 @@ function gr(str) {
     }
     return left + right
 }
-console.log(gr("FE"));
+
 
 
 
